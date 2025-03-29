@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Photo Editor</h1>
+        <div class="upload-container">
+            <input type="file" id="imageUpload" accept="image/*">
+            <label for="imageUpload"><i class="fas fa-upload"></i> Choose an image</label>
+        </div>
+        
+        <div class="editor">
+            <div class="canvas-container">
+                <canvas id="canvas"></canvas>
+                <div id="no-image-message">Upload an image to get started</div>
+            </div>
+            
+            <div class="controls">
+                <div class="filter-controls">
+                    <h3>Filters</h3>
+                    <div class="slider-group">
+                        <label for="grayscale">Grayscale</label>
+                        <input type="range" id="grayscale" min="0" max="100" value="0">
+                        <span class="value-display">0%</span>
+                    </div>
+                    
+                    <div class="slider-group">
+                        <label for="sepia">Sepia</label>
+                        <input type="range" id="sepia" min="0" max="100" value="0">
+                        <span class="value-display">0%</span>
+                    </div>
+                    
+                    <div class="slider-group">
+                        <label for="blur">Blur</label>
+                        <input type="range" id="blur" min="0" max="10" value="0">
+                        <span class="value-display">0px</span>
+                    </div>
+                    
+                    <h3>Adjustments</h3>
+                    <div class="slider-group">
+                        <label for="brightness">Brightness</label>
+                        <input type="range" id="brightness" min="0" max="200" value="100">
+                        <span class="value-display">100%</span>
+                    </div>
+                    
+                    <div class="slider-group">
+                        <label for="contrast">Contrast</label>
+                        <input type="range" id="contrast" min="0" max="200" value="100">
+                        <span class="value-display">100%</span>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="reset"><i class="fas fa-undo"></i> Reset</button>
+                        <button id="remove"><i class="fas fa-trash"></i> Remove</button>
+                        <button id="save"><i class="fas fa-download"></i> Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
